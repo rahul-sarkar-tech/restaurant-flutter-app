@@ -124,8 +124,7 @@ Fully serverless architecture powered by Firebase:
   <img src="screenshots/Android/home.png" width="30%"/>
   <img src="screenshots/Android/menu.png" width="30%"/>
   <img src="screenshots/Android/cart.png" width="30%"/>
-
-    <img src="screenshots/Android/home.png" width="30%"/>
+  <img src="screenshots/Android/home.png" width="30%"/>
   <img src="screenshots/Android/menu.png" width="30%"/>
   <img src="screenshots/Android/cart.png" width="30%"/>
 </p>
