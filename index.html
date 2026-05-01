@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Urban Tandoor | Premium Restaurant Ordering App</title>
+    <meta name="description" content="Urban Tandoor - A modern, high-converting restaurant ordering application built with Flutter and Firebase.">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="style.css">
+    <!-- Preload Hero Image -->
+    <link rel="preload" as="image" href="screenshots/Android/home.png">
+</head>
+<body>
+
+    <!-- Header -->
+    <header id="header">
+        <nav class="container">
+            <div class="logo">
+                <span class="accent">Urban</span> Tandoor
+            </div>
+            <ul class="nav-links">
+                <li><a href="#features">Features</a></li>
+                <li><a href="#screenshots">Screenshots</a></li>
+                <li><a href="#tech">Tech Stack</a></li>
+                <li><a href="#about">Developer</a></li>
+            </ul>
+            <a href="https://github.com/rahul-sarkar-tech/restaurant-flutter-app" target="_blank" class="btn btn-outline btn-sm">GitHub</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section">
+            <div class="container hero-grid">
+                <div class="hero-content reveal">
+                    <span class="badge">Modern Food Delivery</span>
+                    <h1>Experience <span class="text-gradient">Urban Tandoor</span></h1>
+                    <p class="lead">A premium restaurant ordering experience built for speed, reliability, and modern aesthetics. Powered by Flutter and Firebase.</p>
+                    <div class="hero-btns">
+                        <a href="#screenshots" class="btn btn-primary">View Screenshots</a>
+                        <a href="#" class="btn btn-secondary">Download APK <i data-lucide="download"></i></a>
+                    </div>
+                </div>
+                <div class="hero-image reveal delay-1">
+                    <div class="phone-mockup">
+                        <img src="screenshots/Android/home.png" alt="Urban Tandoor Home Screen" fetchpriority="high" decoding="sync" width="290" height="580">
+                    </div>
+                </div>
+            </div>
+            <div class="hero-bg-accent"></div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="section">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2>Powerful Features</h2>
+                    <p>Designed to provide the best user experience for hungry customers.</p>
+                </div>
+                <div class="features-grid">
+                    <div class="feature-card reveal">
+                        <div class="icon-box"><i data-lucide="shopping-cart"></i></div>
+                        <h3>Smart Cart System</h3>
+                        <p>Seamlessly manage orders with a high-performance cart system that handles complex customizations.</p>
+                    </div>
+                    <div class="feature-card reveal delay-1">
+                        <div class="icon-box"><i data-lucide="refresh-cw"></i></div>
+                        <h3>Firebase Real-time</h3>
+                        <p>Instant order status updates and synchronization across all your devices using Firebase backend.</p>
+                    </div>
+                    <div class="feature-card reveal delay-2">
+                        <div class="icon-box"><i data-lucide="map-pin"></i></div>
+                        <h3>Location Picker</h3>
+                        <p>Precise delivery targeting with integrated Google Maps API for effortless location selection.</p>
+                    </div>
+                    <div class="feature-card reveal delay-3">
+                        <div class="icon-box"><i data-lucide="shield-check"></i></div>
+                        <h3>Secure Auth</h3>
+                        <p>Robust authentication system ensuring your data and order history remain private and secure.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Screenshots Section -->
+        <section id="screenshots" class="section screenshots-section">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2>Visual Showcase</h2>
+                    <p>Experience the clean and intuitive interface across both platforms.</p>
+                </div>
+                
+                <!-- iOS Gallery -->
+                <div class="platform-gallery reveal">
+                    <h3 class="gallery-title"><i data-lucide="apple"></i> iOS Application</h3>
+                    <div class="screenshots-scroll">
+                        <div class="screenshot-card">
+                            <img src="screenshots/IOS/home.png" alt="iOS Home" loading="lazy" decoding="async" width="230" height="460">
+                            <span>Home Screen</span>
+                        </div>
+                        <div class="screenshot-card">
+                            <img src="screenshots/IOS/menu.png" alt="iOS Menu" loading="lazy" decoding="async" width="230" height="460">
+                            <span>Menu Explorer</span>
+                        </div>
+                        <div class="screenshot-card">
+                            <img src="screenshots/IOS/cart.png" alt="iOS Cart" loading="lazy" decoding="async" width="230" height="460">
+                            <span>Checkout Flow</span>
+                        </div>
+                        <div class="screenshot-card">
+                            <img src="screenshots/IOS/checkout.png" alt="iOS Checkout" loading="lazy" decoding="async" width="230" height="460">
+                            <span>Payment Page</span>
+                        </div>
+                        <div class="screenshot-card">
+                            <img src="screenshots/IOS/order-tracking.png" alt="iOS Tracking" loading="lazy" decoding="async" width="230" height="460">
+                            <span>Live Tracking</span>
+                        </div>
+                        <div class="screenshot-card">
+                            <img src="screenshots/IOS/location.png" alt="iOS Location" loading="lazy" decoding="async" width="230" height="460">
+                            <span>Delivery Address</span>
+                        </div>
+                        <div class="screenshot-card">
+                            <img src="screenshots/IOS/dark-theme.png" alt="iOS Dark" loading="lazy" decoding="async" width="230" height="460">
+                            <span>Dark Mode</span>
+                        </div>
+                        <div class="screenshot-card">
+                            <img src="screenshots/IOS/wishlist.png" alt="iOS Wishlist" loading="lazy" decoding="async" width="230" height="460">
+                            <span>Favorites</span>
+                        </div>
+                        <div class="screenshot-card">
+                            <img src="screenshots/IOS/admin-dashboard.png" alt="iOS Admin" loading="lazy" decoding="async" width="230" height="460">
+                            <span>Admin Panel</span>
+                        </div>
+                        <div class="screenshot-card">
+                            <img src="screenshots/IOS/order-sucess.png" alt="iOS Success" loading="lazy" decoding="async" width="230" height="460">
+                            <span>Order Placed</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Android Gallery -->
+                <div class="platform-gallery reveal delay-1">
+                    <h3 class="gallery-title"><i data-lucide="smartphone"></i> Android Application</h3>
+                    <div class="screenshots-scroll">
+                        <div class="screenshot-card">
+                            <img src="screenshots/Android/home.png" alt="Android Home" loading="lazy" decoding="async" width="230" height="460">
+                            <span>Home Screen</span>
+                        </div>
+                        <div class="screenshot-card">
+                            <img src="screenshots/Android/menu.png" alt="Android Menu" loading="lazy" decoding="async" width="230" height="460">
+                            <span>Food Menu</span>
+                        </div>
+                        <div class="screenshot-card">
+                            <img src="screenshots/Android/cart.png" alt="Android Cart" loading="lazy" decoding="async" width="230" height="460">
+                            <span>Shopping Cart</span>
+                        </div>
+                        <div class="screenshot-card">
+                            <img src="screenshots/Android/single-item-1.png" alt="Android Item" loading="lazy" decoding="async" width="230" height="460">
+                            <span>Product Detail</span>
+                        </div>
+                        <div class="screenshot-card">
+                            <img src="screenshots/Android/location-picker-gps.png" alt="Android GPS" loading="lazy" decoding="async" width="230" height="460">
+                            <span>Location Picker</span>
+                        </div>
+                        <div class="screenshot-card">
+                            <img src="screenshots/Android/order-success.png" alt="Android Success" loading="lazy" decoding="async" width="230" height="460">
+                            <span>Order Confirmed</span>
+                        </div>
+                        <div class="screenshot-card">
+                            <img src="screenshots/Android/profile.png" alt="Android Profile" loading="lazy" decoding="async" width="230" height="460">
+                            <span>User Profile</span>
+                        </div>
+                        <div class="screenshot-card">
+                            <img src="screenshots/Android/home-2.png" alt="Android Home 2" loading="lazy" decoding="async" width="230" height="460">
+                            <span>Alternative UI</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tech Stack Section -->
+        <section id="tech" class="section tech-section">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2>Built With Modern Tech</h2>
+                    <p>Leveraging industry-standard technologies for a robust foundation.</p>
+                </div>
+                <div class="tech-grid reveal">
+                    <div class="tech-card">
+                        <div class="tech-icon"><i data-lucide="code-2"></i></div>
+                        <h4>Flutter</h4>
+                        <p>Cross-platform UI toolkit</p>
+                    </div>
+                    <div class="tech-card">
+                        <div class="tech-icon"><i data-lucide="database"></i></div>
+                        <h4>Firebase</h4>
+                        <p>Backend & Database</p>
+                    </div>
+                    <div class="tech-card">
+                        <div class="tech-icon"><i data-lucide="map"></i></div>
+                        <h4>Google Maps API</h4>
+                        <p>Geospatial Services</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Developer Section -->
+        <section id="about" class="section about-section">
+            <div class="container reveal">
+                <div class="about-card">
+                    <div class="about-content">
+                        <h2>The Developer</h2>
+                        <h3 class="accent">Rahul Sarkar</h3>
+                        <p class="role">Flutter Developer & UI/UX Designer</p>
+                        <p class="bio">I specialize in building scalable, high-performance mobile applications with a focus on clean code and exceptional user experience.</p>
+                        <div class="social-links">
+                            <a href="https://github.com/rahul-sarkar-tech" target="_blank" class="btn btn-github">
+                                <i data-lucide="github"></i> GitHub Profile
+                            </a>
+                        </div>
+                    </div>
+                    <div class="about-visual">
+                        <div class="visual-circle"></div>
+                        <i data-lucide="user" class="user-icon"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2024 Urban Tandoor. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="https://github.com/rahul-sarkar-tech/restaurant-flutter-app"><i data-lucide="github"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
