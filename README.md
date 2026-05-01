@@ -105,29 +105,29 @@ Fully serverless architecture powered by Firebase:
 
 ## 📸 Screenshots
 
-## 📱 iOS Screenshots
+## 📱 iOS Screenshots (Preview)
 
 <p align="center">
-  <img src="screenshots/Android/home.png" width="30%"/>
-  <img src="screenshots/Android/menu.png" width="30%"/>
-  <img src="screenshots/Android/cart.png" width="30%"/>
-    <img src="screenshots/Android/home.png" width="30%"/>
-  <img src="screenshots/Android/menu.png" width="30%"/>
-  <img src="screenshots/Android/cart.png" width="30%"/>
+  <img src="screenshots/IOS/home.png" width="30%"/>
+  <img src="screenshots/IOS/menu.png" width="30%"/>
+  <img src="screenshots/IOS/cart.png" width="30%"/>
 </p>
+
+➡️ View all iOS screenshots:  
+https://github.com/rahul-sarkar-tech/restaurant-flutter-app/tree/main/screenshots/IOS
 
 ---
 
-## 🤖 Android Screenshots
+## 🤖 Android Screenshots (Preview)
 
 <p align="center">
   <img src="screenshots/Android/home.png" width="30%"/>
   <img src="screenshots/Android/menu.png" width="30%"/>
   <img src="screenshots/Android/cart.png" width="30%"/>
-  <img src="screenshots/Android/home.png" width="30%"/>
-  <img src="screenshots/Android/menu.png" width="30%"/>
-  <img src="screenshots/Android/cart.png" width="30%"/>
 </p>
+
+➡️ View all Android screenshots:  
+https://github.com/rahul-sarkar-tech/restaurant-flutter-app/tree/main/screenshots/Android
 ---
 
 ## 🚀 Performance & Scalability
