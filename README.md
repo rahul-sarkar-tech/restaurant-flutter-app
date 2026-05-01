@@ -8,7 +8,7 @@ A scalable Flutter-based restaurant ordering application designed for real-world
 - Android ✅  
 - iOS ✅  
 
----
+--- 
 
 ## 🚀 Overview
 Urban Tandoor is a production-style mobile app that enables users to browse menu items, customize orders, manage cart, and place orders with real-time backend synchronization.
