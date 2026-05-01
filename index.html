@@ -12,24 +12,68 @@
     <!-- Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
     <link rel="stylesheet" href="style.css">
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="favicon_io/site.webmanifest">
+    
     <!-- Preload Hero Image -->
-    <link rel="preload" as="image" href="screenshots/Android/home.png">
+    <link rel="preload" as="image" href="screenshots/IOS/home.png">
+    <style>
+        .grain {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100vw; height: 100vh;
+            background: url('https://grainy-gradients.vercel.app/noise.svg');
+            opacity: 0.05;
+            pointer-events: none;
+            z-index: 9999;
+        }
+        .cursor-follower {
+            position: fixed;
+            width: 20px;
+            height: 20px;
+            background: var(--accent);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 10000;
+            transition: transform 0.1s ease;
+            mix-blend-mode: difference;
+            display: none;
+        }
+        @media (min-width: 992px) { .cursor-follower { display: block; } }
+    </style>
 </head>
-<body>
+<body class="premium-theme">
+    <div class="grain"></div>
+    <div class="cursor-follower"></div>
 
     <!-- Header -->
     <header id="header">
         <nav class="container">
             <div class="logo">
-                <span class="accent">Urban</span> Tandoor
+                <img src="assets/images/logo.png" alt="Urban Tandoor Logo">
             </div>
-            <ul class="nav-links">
-                <li><a href="#features">Features</a></li>
-                <li><a href="#screenshots">Screenshots</a></li>
-                <li><a href="#tech">Tech Stack</a></li>
-                <li><a href="#about">Developer</a></li>
-            </ul>
-            <a href="https://github.com/rahul-sarkar-tech/restaurant-flutter-app" target="_blank" class="btn btn-outline btn-sm">GitHub</a>
+            <div class="nav-container">
+                <ul class="nav-links">
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#screenshots">Screenshots</a></li>
+                    <li><a href="#tech">Tech Stack</a></li>
+                    <li><a href="#about">Developer</a></li>
+                </ul>
+                <div class="nav-cta">
+                    <a href="https://github.com/rahul-sarkar-tech/restaurant-flutter-app" target="_blank" class="btn btn-outline btn-sm">
+                        <img src="https://cdn.simpleicons.org/github/FF6B00" alt="GitHub" class="btn-icon"> Repository
+                    </a>
+                </div>
+            </div>
+            
+            <button class="mobile-menu-toggle" aria-label="Toggle Menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
         </nav>
     </header>
 
@@ -42,13 +86,17 @@
                     <h1>Experience <span class="text-gradient">Urban Tandoor</span></h1>
                     <p class="lead">A premium restaurant ordering experience built for speed, reliability, and modern aesthetics. Powered by Flutter and Firebase.</p>
                     <div class="hero-btns">
-                        <a href="#screenshots" class="btn btn-primary">View Screenshots</a>
-                        <a href="#" class="btn btn-secondary">Download APK <i data-lucide="download"></i></a>
+                        <a href="#screenshots" class="btn btn-primary">
+                            Explore App <i data-lucide="arrow-right"></i>
+                        </a>
+                        <a href="https://github.com/rahul-sarkar-tech/restaurant-flutter-app/tags" target="_blank" class="btn btn-secondary">
+                            Download APK <i data-lucide="download"></i>
+                        </a>
                     </div>
                 </div>
                 <div class="hero-image reveal delay-1">
                     <div class="phone-mockup">
-                        <img src="screenshots/Android/home.png" alt="Urban Tandoor Home Screen" fetchpriority="high" decoding="sync" width="290" height="580">
+                        <img src="screenshots/IOS/home.png" alt="Urban Tandoor Home Screen" fetchpriority="high" decoding="sync" width="290" height="580">
                     </div>
                 </div>
             </div>
@@ -62,26 +110,47 @@
                     <h2>Powerful Features</h2>
                     <p>Designed to provide the best user experience for hungry customers.</p>
                 </div>
-                <div class="features-grid">
-                    <div class="feature-card reveal">
-                        <div class="icon-box"><i data-lucide="shopping-cart"></i></div>
-                        <h3>Smart Cart System</h3>
-                        <p>Seamlessly manage orders with a high-performance cart system that handles complex customizations.</p>
+                <div class="features-carousel-container">
+                    <div class="features-grid carousel-track">
+                        <div class="feature-card carousel-item">
+                            <div class="icon-box"><i data-lucide="layout"></i></div>
+                            <h3>MVVM Architecture</h3>
+                            <p>Built with a robust Modified MVVM pattern using Provider, ensuring clean separation of business logic and UI.</p>
+                        </div>
+                        <div class="feature-card carousel-item">
+                            <div class="icon-box"><i data-lucide="cloud-lightning"></i></div>
+                            <h3>Cloud-Synced Cart</h3>
+                            <p>Real-time Firestore synchronization for cart state and item customizations, enabling a seamless cross-device experience.</p>
+                        </div>
+                        <div class="feature-card carousel-item">
+                            <div class="icon-box"><i data-lucide="settings-2"></i></div>
+                            <h3>Real-time App Controls</h3>
+                            <p>Dynamic global settings for taxes, fees, and store status that reflect instantly across all users via Firebase snapshots.</p>
+                        </div>
+                        <div class="feature-card carousel-item">
+                            <div class="icon-box"><i data-lucide="map"></i></div>
+                            <h3>Geocoding & Maps</h3>
+                            <p>Integrated Google Maps API for precise location picking and automated geocoding for effortless address management.</p>
+                        </div>
+                        <div class="feature-card carousel-item">
+                            <div class="icon-box"><i data-lucide="user-cog"></i></div>
+                            <h3>Admin Dashboard</h3>
+                            <p>Role-based access control with a built-in admin panel for managing food items, categories, and global app configuration.</p>
+                        </div>
+                        <div class="feature-card carousel-item">
+                            <div class="icon-box"><i data-lucide="zap"></i></div>
+                            <h3>Motion Design</h3>
+                            <p>Premium 60 FPS user experience with staggered animations, Lottie assets, and smooth transitions via flutter_animate.</p>
+                        </div>
                     </div>
-                    <div class="feature-card reveal delay-1">
-                        <div class="icon-box"><i data-lucide="refresh-cw"></i></div>
-                        <h3>Firebase Real-time</h3>
-                        <p>Instant order status updates and synchronization across all your devices using Firebase backend.</p>
-                    </div>
-                    <div class="feature-card reveal delay-2">
-                        <div class="icon-box"><i data-lucide="map-pin"></i></div>
-                        <h3>Location Picker</h3>
-                        <p>Precise delivery targeting with integrated Google Maps API for effortless location selection.</p>
-                    </div>
-                    <div class="feature-card reveal delay-3">
-                        <div class="icon-box"><i data-lucide="shield-check"></i></div>
-                        <h3>Secure Auth</h3>
-                        <p>Robust authentication system ensuring your data and order history remain private and secure.</p>
+                    
+                    <div class="carousel-indicators">
+                        <span class="dot active"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
                     </div>
                 </div>
             </div>
@@ -183,6 +252,33 @@
             </div>
         </section>
 
+        <!-- Download & Test CTA Section -->
+        <section id="download" class="section download-cta-section">
+            <div class="container reveal">
+                <div class="download-banner">
+                    <div class="download-content">
+                        <h2>Experience the <span class="text-gradient">Performance</span></h2>
+                        <p>Don't just take our word for it. Download and test the APK to feel the butter-smooth 60 FPS animations, lightning-fast speed, and premium user experience for yourself.</p>
+                        <div class="download-actions">
+                            <a href="https://github.com/rahul-sarkar-tech/restaurant-flutter-app/tags" target="_blank" class="btn btn-primary">
+                                <i data-lucide="download-cloud"></i> Download APK Now
+                            </a>
+                        </div>
+                    </div>
+                    <div class="download-stats">
+                        <div class="stat-item">
+                            <span class="stat-value">60+</span>
+                            <span class="stat-label">FPS Smoothness</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-value">< 1s</span>
+                            <span class="stat-label">Load Time</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Tech Stack Section -->
         <section id="tech" class="section tech-section">
             <div class="container">
@@ -217,17 +313,17 @@
                     <div class="about-content">
                         <h2>The Developer</h2>
                         <h3 class="accent">Rahul Sarkar</h3>
-                        <p class="role">Flutter Developer & UI/UX Designer</p>
+                        <p class="role">Flutter Developer</p>
                         <p class="bio">I specialize in building scalable, high-performance mobile applications with a focus on clean code and exceptional user experience.</p>
                         <div class="social-links">
                             <a href="https://github.com/rahul-sarkar-tech" target="_blank" class="btn btn-github">
-                                <i data-lucide="github"></i> GitHub Profile
+                                <img src="https://cdn.simpleicons.org/github/white" alt="GitHub" class="btn-icon"> GitHub Profile
                             </a>
                         </div>
                     </div>
                     <div class="about-visual">
                         <div class="visual-circle"></div>
-                        <i data-lucide="user" class="user-icon"></i>
+                        <img src="assets/images/image.png" alt="Rahul Sarkar" class="developer-photo" loading="lazy">
                     </div>
                 </div>
             </div>
@@ -237,10 +333,17 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
+            <div class="footer-top">
+                <div class="footer-logo">
+                    <img src="assets/images/logo.png" alt="Urban Tandoor Logo">
+                </div>
+            </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 Urban Tandoor. All rights reserved.</p>
+                <p>&copy; 2026 Urban Tandoor. All rights reserved.</p>
                 <div class="footer-links">
-                    <a href="https://github.com/rahul-sarkar-tech/restaurant-flutter-app"><i data-lucide="github"></i></a>
+                    <a href="https://github.com/rahul-sarkar-tech/restaurant-flutter-app">
+                        <img src="https://cdn.simpleicons.org/github/white" alt="GitHub" width="20" height="20">
+                    </a>
                 </div>
             </div>
         </div>
