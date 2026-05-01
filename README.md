@@ -108,9 +108,9 @@ Fully serverless architecture powered by Firebase:
 ## 📱 iOS Screenshots
 
 <p align="center">
-  <img src="screenshots/IOS/home.png" width="250"/>
-  <img src="screenshots/IOS/menu.png" width="250"/>
-  <img src="screenshots/IOS/cart.png" width="250"/>
+  <img src="screenshots/IOS/home.png" width="30%"/>
+  <img src="screenshots/IOS/menu.png" width="30%"/>
+  <img src="screenshots/IOS/cart.png" width="30%"/>
 </p>
 
 ---
@@ -118,11 +118,10 @@ Fully serverless architecture powered by Firebase:
 ## 🤖 Android Screenshots
 
 <p align="center">
-  <img src="screenshots/android/home.png" width="250"/>
-  <img src="screenshots/android/menu.png" width="250"/>
-  <img src="screenshots/android/cart.png" width="250"/>
+  <img src="screenshots/Android/home.png" width="30%"/>
+  <img src="screenshots/Android/menu.png" width="30%"/>
+  <img src="screenshots/Android/cart.png" width="30%"/>
 </p>
-
 ---
 
 ## 🚀 Performance & Scalability
